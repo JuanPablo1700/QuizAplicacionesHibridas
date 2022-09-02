@@ -69,3 +69,7 @@ p {
     padding: 15px;
     font-size: 15px;
 }
+
+.footer {
+    display: block;
+}
