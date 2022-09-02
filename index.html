@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Cuadro Comparativo</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <h1>
+                Cuadro Comparativo <br>
+                Aplicaciones Híbridas
+            </h1>
+        </div>
+        <div class="div2">
+            <table align="center">
+                <thead>
+                    <th style="width: 370px;">Caracteristica</th>
+                    <th>Híbridas</th>
+                    <th>Nativas</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Velocidad</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q1" id="q1-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q1" id="q1-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Facilidad de implementación</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q2" id="q2-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q2" id="q2-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Curva de aprendizaje más rápida</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q3" id="q3-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q3" id="q3-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Versatilidad</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q4" id="q4-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q4" id="q4-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Menor costo</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q5" id="q5-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q5" id="q5-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Acceso a características del dispositivo</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q6" id="q6-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q6" id="q6-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aspecto visual y experiencia de usuario</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q7" id="q7-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q7" id="q7-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Menor tiempo de desarrollo</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q8" id="q8-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q8" id="q8-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Actualizaciones indoloras</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q9" id="q9-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q9" id="q9-n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mayor seguridad</td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q10" id="q10-h">
+                        </td>
+                        <td style="text-align: center;">
+                            <input type="radio" name="q10" id="q10-n">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="display: flex; justify-content: center; margin-top: 25px;">
+                <input class="boton" type="button" value="Calcular" onclick="calcularPuntaje()">
+            </div>
+            <br>
+        </div>
+        <div class="div3">
+            <h1>Juan Pablo Campos Casillas</h1>
+        </div>
+    </div>
+</body>
+
+<script>
+    function calcularPuntaje(){
+        var puntaje = 0;
+        let vq1 = document.querySelector('input[name="q1"]:checked');
+        let vq2 = document.querySelector('input[name="q2"]:checked');
+        let vq3 = document.querySelector('input[name="q3"]:checked');
+        let vq4 = document.querySelector('input[name="q4"]:checked');
+        let vq5 = document.querySelector('input[name="q5"]:checked');
+        let vq6 = document.querySelector('input[name="q6"]:checked');
+        let vq7 = document.querySelector('input[name="q7"]:checked');
+        let vq8 = document.querySelector('input[name="q8"]:checked');
+        let vq9 = document.querySelector('input[name="q9"]:checked');
+        let vq10 = document.querySelector('input[name="q10"]:checked');
+        
+        if(vq1) if(vq1.id === 'q1-n') puntaje = puntaje + 1;
+        
+        if(vq2) if(vq2.id === 'q2-h') puntaje = puntaje + 1;
+    
+        if(vq3) if(vq3.id === 'q3-h') puntaje = puntaje + 1;
+        
+        if(vq4) if(vq4.id === 'q4-h') puntaje = puntaje + 1;
+        
+        if(vq5) if(vq5.id === 'q5-h') puntaje = puntaje + 1;
+        
+        if(vq6) if(vq6.id === 'q6-n') puntaje = puntaje + 1;
+        
+        if(vq7) if(vq7.id === 'q7-n') puntaje = puntaje + 1;
+        
+        if(vq8) if(vq8.id === 'q8-h') puntaje = puntaje + 1;
+        
+        if(vq9) if(vq9.id === 'q9-h') puntaje = puntaje + 1;
+
+        if(vq10) if(vq10.id === 'q10-n') puntaje = puntaje + 1;
+        
+        if(vq1 | vq2 | vq3 | vq4 | vq5 | vq6 | vq7 | vq8 | vq9 | vq10 == null){
+            alert('Complete el formulario.');
+        }else{
+            alert('Obtuviste ' + puntaje + ' puntos.');
+        }
+    }
+</script>
+
+</html>
